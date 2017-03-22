@@ -25,10 +25,8 @@ casper = require('casper').create({
 casper.libraryPath = '/docmodules';
 //casper.options.waitTimeout = 50000;
 
-
 // Enter your SUSE Manager Test Server URL
 var url = 'https://doctesting-suma3pg.tf.local';
-
 
 // Login to SUSE Manager
 casper.start(url, function() {
@@ -42,13 +40,11 @@ casper.start(url, function() {
     });
 });
 
-
 casper.thenEvaluate(function(){
     console.log("Page Title " + document.title);
     console.log("Your name is " + document.querySelector('.headerTinymanName').textContent );
     console.log("******** GOING TO LOAD MINION RMT PAGE");
 });
-
 
 //SUSE Manager Menu Modules
 /* Import SUSE Manager Menu Modules: To speed up dev simply comment out modules you do not wish to load.
@@ -57,20 +53,17 @@ casper.thenEvaluate(function(){
 
  The following will not load when running ./run-casper.sh
  EXAMPLE: //phantom.injectJs('docmodules/activation_keys.js');
+
+ Generated image naming conventions should match that of the application folder structure they are generated in.
+ For example:
+ systems > systems > physical systems in the webui should match an image named:
+
+ systems_systems_physical_systems.png
+
+ This naming scheme prevents overwriting of other images.
+ TODO: Add logic ensuring we do not overwrite an image or increment by number
 */
 
-/*
-* Generated image naming conventions should match that of the folder they are generated in.
-* For example:
-*
-* systems > systems > physical systems in the webui should match an image named:
-*
-* systems_systems_physical_systems.png
-*
-* This naming scheme prevents overwriting of other images.
-* TODO: Add logic ensuring we do not overwrite an image or increment by number
-*
-**/
 phantom.injectJs('docmodules/admin.js');
 /*
 phantom.injectJs('docmodules/nav_side_bar.js');
@@ -97,8 +90,8 @@ phantom.injectJs('docmodules/users.js');
 
 phantom.injectJs('docmodules/help.js');
 */
-// SUSE Manager Test Setup Modules for generated javascript components
 
+// SUSE Manager Test Setup Modules for generated javascript components
 phantom.injectJs('docmodules/system_details_salt.js');
 phantom.injectJs('docmodules/system_details_traditional.js');
 
