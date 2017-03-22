@@ -7,8 +7,8 @@ Fennek may be customized and ported with some footwork for use with any web base
 
 fennek provides the following features:
 * Automatically follow URL's and capture entire pages or specific page elements (div, ids, class, scripts etc)   
-* Fill forms with data and capture them for use as documentation examples   
-* Specify clipRect (crop sections of an element or page) with PhantomJS/CasperJS   
+* Fill forms with data and capture for use as documentation examples   
+* Specify clipRect (crop sections of an element or page)
 * Automates tracking of broken links, bugs and unexpected UIX issues   
 * Installation of server certificates   
 * Provides Application based file structure   
