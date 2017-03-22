@@ -73,7 +73,7 @@ For example:
  var url = 'https://doctesting-suma3pg.tf.local';    
 ``` 
 
-## Start the Mission
+## Begin Reconnaissance
 
 * Execute ```./fennek-recon.sh``` from CLI to begin reconnaissance.  
 
