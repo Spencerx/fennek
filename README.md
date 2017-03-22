@@ -26,7 +26,7 @@ Devel & Research:
 * Migrate images for use with DAPS: ```./fennek-docbook.js```
 
 
-## Mission Briefing
+## Get It!
 * **Clone this repository:**  
 ```git clone https://github.com/openSUSE/fennek.git && cd fennek```
 
