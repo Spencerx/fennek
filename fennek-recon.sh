@@ -7,7 +7,7 @@
 
 
 # Run as normal user
-time node_modules/casperjs/bin/casperjs  --ssl-protocol=any --ignore-ssl-errors=yes  mgr-recon.js
+time node_modules/casperjs/bin/casperjs  --ssl-protocol=any --ignore-ssl-errors=yes  fennek.js
 
 
 

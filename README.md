@@ -2,14 +2,14 @@
 
 
 ## Introduction to fennek
-This tool was created to aid in the reconnaissance, automation and testing of images for SUSE documentation. 
-It can be customized and used with any web based application.    
+Fennek aids in automatic reconnaissance, testing and preparation of images for SUSE Manager documentation. 
+It may be customized and ported with a little footwork for use with any web based application.    
 
 fennek can perform the following operations:
 * Automatically follow URL's and capture entire pages or specific elements (div, ids, class, scripts)
 * Fill forms and capture them for use as examples
-* Specify clipRect with PhantomJS
-* Diff reference images with each run allowing for pass/fail checks (In Devel)
+* Specify clipRect (crop sections of an element or page) with PhantomJS/CasperJS
+* Diff reference images with each run allowing for pass/fail checks (In Devel/research)
 * Automates tracking of broken links, bugs and unexpected UIX issues
 
 ## Overview
