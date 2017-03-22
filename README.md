@@ -17,7 +17,7 @@ fennek provides the following features:
 
 Devel & Research:
 * Run tests from a User perspective (Click buttons, follow links, and return results)   
-* Diff reference images after each run allowing for pass/fail checks 
+* Diff reference images from a former run allowing for pass/fail checks 
 
 
 ## Overview
