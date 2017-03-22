@@ -28,10 +28,7 @@ Devel & Research:
 
 ## Mission Briefing
 * **Clone this repository:**  
-```git clone https://github.com/openSUSE/fennek.git```
-
-* **Change working dir:**  
-```cd fennek```
+```git clone https://github.com/openSUSE/fennek.git && cd fennek```
 
 
 ### Install Phantomjs and Node Package Manager (NPM)
