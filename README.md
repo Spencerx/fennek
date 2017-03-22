@@ -9,7 +9,7 @@ fennek can perform the following operations:
 * Automatically follow URL's and capture entire pages or specific elements (div, ids, class, scripts)
 * Fill forms and capture them for use as examples
 * Specify clipRect (crop sections of an element or page) with PhantomJS/CasperJS
-* Diff reference images with each run allowing for pass/fail checks (In Devel/research)
+* Diff reference images after each run allowing for pass/fail checks (In Devel/research)
 * Automates tracking of broken links, bugs and unexpected UIX issues
 
 ## Overview
