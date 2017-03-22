@@ -3,7 +3,7 @@
 
 ## Introduction to fennek
 Fennek aids in automatic reconnaissance, testing and preparation of images for SUSE Manager documentation. 
-Fennek may be customized and ported with some footwork for use with any web based application.    
+Fennek may be customized and ported with some footwork for use with any web based application. It recieved its name from [Fennek](https://en.wikipedia.org/wiki/Fennek)    
 
 fennek provides the following features:
 * Automatically follow URL's and capture entire pages or specific page elements (div, ids, class, scripts etc)   
