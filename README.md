@@ -3,14 +3,18 @@
 
 ## Introduction to fennek
 Fennek aids in automatic reconnaissance, testing and preparation of images for SUSE Manager documentation. 
-It may be customized and ported with a little footwork for use with any web based application.    
+Fennek may be customized and ported with some footwork for use with any web based application.    
 
-fennek can perform the following operations:
-* Automatically follow URL's and capture entire pages or specific elements (div, ids, class, scripts)
-* Fill forms and capture them for use as examples
-* Specify clipRect (crop sections of an element or page) with PhantomJS/CasperJS
-* Diff reference images after each run allowing for pass/fail checks (In Devel/research)
-* Automates tracking of broken links, bugs and unexpected UIX issues
+fennek provides the following features:
+* Automatically follow URL's and capture entire pages or specific page elements (div, ids, class, scripts etc)   
+* Fill forms with data and capture them for use as documentation examples   
+* Specify clipRect (crop sections of an element or page) with PhantomJS/CasperJS   
+* Automates tracking of broken links, bugs and unexpected UIX issues   
+* Installation of server certificates   
+* Provides Application based file structure   
+* Provides export script for DAPS/Docbook image processing   
+* (In Devel)Run tests from a User perspective (Click buttons, follow links, and return results)   
+* (In Devel/Research)Diff reference images after each run allowing for pass/fail checks   
 
 ## Overview
 * Install server certificates with: ```./fennek-certificates.sh```
@@ -40,7 +44,7 @@ CasperJS: Navigation scripting & testing for PhantomJS and SlimerJS
 
 ## Install Server Certificates
 
-* Open your **fennek-cerfticates.sh** script. For our use case the SUSE Manager WebUI certificates are required for accessing 
+* Open your **fennek-certificates.sh** script. For our use case the SUSE Manager WebUI certificates are required for accessing 
 components(websockets) during images processing. This script must be run as the **sudo** user.
 
 Replace **$HOSTNAME** with your SUSE Manager servers hostname:
