@@ -14,7 +14,8 @@ fennek provides the following features:
 * Provides Application based file structure   
 * Provides export script for DAPS/Docbook image processing   
 * (In Devel)Run tests from a User perspective (Click buttons, follow links, and return results)   
-* (In Devel/Research)Diff reference images after each run allowing for pass/fail checks   
+* (In Devel/Research)Diff reference images after each run allowing for pass/fail checks 
+* HTTPS/HTTP supported
 
 ## Overview
 * Install server certificates with: ```./fennek-certificates.sh```
