@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Execute this script after running ./recon-now.sh
+# Execute this script after running ./fennek-recon.sh
 # All png images found after running recon-now.sh will be placed into images/png/
 # All images should then be copied to your doc-susemanager/images/png folder
 
