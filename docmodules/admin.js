@@ -13,7 +13,7 @@ casper.thenOpen(url + '/rhn/admin/setup/ProxySettings.do', function() {
 // Admin: Mirror Credentials
 casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
     //wait 1 second to pickup organization
-    this.wait(100000, function ()
+    this.wait(1000, function ()
     {
         this.captureSelector('images/admin/admin_organization_credentials.png', '#spacewalk-content')
     });
@@ -22,21 +22,28 @@ casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
 
 // Admin: SUSE Products
 casper.thenOpen(url + '/rhn/admin/setup/SUSEProducts.do', function() {
-    //wait 1 second to pickup organization
-    this.wait(50000, function ()
+    //wait 15 seconds to for SUSE Products list to load
+    this.wait(15000, function ()
     {
+        var rows = this.evaluate(function () {
+            return document.getElementsByClassName("table-content")
+                [0].getElementsByTagName("tr").length;
 
-        this.captureSelector('images/admin/admin_suse_products.png', '#spacewalk-content'),
-        {
-                top: 31,
-                left: 3,
-                width: 1280,
-                height: 1024
+        });
+
+        console.log("Number of Rows: " + rows);
+        this.captureSelector('images/admin/admin_suse_products.png', '#spacewalk-content', {
 
 
-        };
+            //  top: 50,
+            //  left: 221,
+            //  width: 1050,
+            //  height: 800
+
+            });
     });
 });
+
 
 // Admin: Mirror Credentials
 casper.thenOpen(url + '/rhn/admin/multiorg/Organizations.do', function() {

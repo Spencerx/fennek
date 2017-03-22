@@ -80,7 +80,7 @@ For example:
 * Execute ```./fennek-recon.sh``` from CLI to begin reconnaissance.  
 
 ## Prepare Images for use with DAPS
-* Transfer images from the default SUSE Manager based structure to a DAPS ready structure by executing: ```./fennek-docbook.sh``` this scrit moves all images to ```docbook/images/png/```
+* Transfer images from the default SUSE Manager based structure to a DAPS ready structure by executing: ```./fennek-docbook.sh``` this script moves all images to ```docbook/images/png/```
 
 More coming...
 
