@@ -45,10 +45,9 @@ CasperJS: Navigation scripting & testing for PhantomJS and SlimerJS
 
 ## Install Server Certificates
 
-* Open your **fennek-certificates.sh** script. For our use case the SUSE Manager WebUI certificates are required for accessing 
-components(websockets) during images processing. This script must be run as the **sudo** user.
+* Open your **fennek-certificates.sh** script. For our use case the SUSE Manager WebUI certificates are required for accessing some components(websockets) during reconnaissance. This script must be run as the **sudo** user.
 
-Replace **$HOSTNAME** with your SUSE Manager servers hostname:
+Replace **$HOSTNAME** with the SUSE Manager server hostname:
 
 ```
 wget http://$HOSTNAME/pub/RHN-ORG-TRUSTED-SSL-CERT -O /etc/pki/trust/anchors/$HOSTNAME_NO_HTTPS.cert    
