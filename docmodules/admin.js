@@ -22,34 +22,39 @@ casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
 
 // Admin: SUSE Products
 casper.thenOpen(url + '/rhn/admin/setup/SUSEProducts.do', function() {
+
+
     //wait 15 seconds to for SUSE Products list to load
-    this.wait(15000, function ()
-    {
-        var rows = this.evaluate(function () {
-            return document.getElementsByClassName("table-content")
-                [0].getElementsByTagName("tr").length;
-
-        });
-
-        console.log("Number of Rows: " + rows);
-        this.captureSelector('images/admin/admin_suse_products.png', '#spacewalk-content', {
+    this.wait(30000, function () {
 
 
-            //  top: 50,
-            //  left: 221,
-            //  width: 1050,
-            //  height: 800
+        var str = this.evaluate(function () {
+            var str = "";
+            var keep = 8;
+            var productRows = document.getElementsByClassName("table-content")[0].getElementsByTagName("tr");
 
-            });
-    });
+            str+="test";
+            str+=productRows;
+            str+=productRows.length;
+
+            for (var i = 0; i < productRows.length; i++) {
+                if(i < keep) continue;
+                productRows[i].remove();
+                //remove(productRows[i]);
+            }
+
+            return str;
+      });
+
+        console.log(str);
+        //console.log("Number of rows: " +rows );
+        this.captureSelector('images/admin/admin_suse_products.png', '#spacewalk-content');
+        }
+    );
 });
-
 
 // Admin: Mirror Credentials
 casper.thenOpen(url + '/rhn/admin/multiorg/Organizations.do', function() {
     this.captureSelector('images/admin/admin_list_organizations.png',
         '#spacewalk-content')
 });
-
-
-

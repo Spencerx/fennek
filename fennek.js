@@ -10,8 +10,8 @@ casper = require('casper').create({
     },
     exitOnError: false,
     verbose: true,
-    js_errors: false,
-    debug: false,
+    js_errors: true,
+    debug: true,
     javascriptEnabled: true,
     //loadImages: true,
     //loadPlugins: true,
@@ -87,7 +87,6 @@ phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/users.js');
-
 phantom.injectJs('docmodules/help.js');
 */
 
