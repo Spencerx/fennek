@@ -33,28 +33,34 @@
 /rhn/systems/SystemEntitlements.do
 
 
-@ SYSTEM DETAILS (TRADITIONAL SYSTEM: ID OF FIRST REGISTERED SYSTEM)
+@ SYSTEM DETAILS (TRADITIONAL SYSTEMS)
+// Details Tabs
 /rhn/systems/details/Overview.do?sid=1000010000
 /rhn/systems/details/Edit.do?sid=1000010000&
 /rhn/systems/details/SystemRemoteCommand.do?sid=1000010000&
 /rhn/systems/details/Activation.do?sid=1000010000&
 /rhn/systems/details/SystemHardware.do?sid=1000010000&
 /rhn/systems/details/SystemMigrate.do?sid=1000010000&
-/rhn/systems/details/ListCustomData.do?sid=1000010000&
 /rhn/systems/details/Notes.do?sid=1000010000&
-/rhn/systems/details/ErrataList.do?sid=1000010000&
+/rhn/systems/details/ListCustomData.do?sid=1000010000&
+
+// SOFTWARE TABS
 /rhn/systems/details/packages/Packages.do?sid=1000010000&
+/rhn/systems/details/ErrataList.do?sid=1000010000&
 /rhn/systems/details/packages/PackageList.do?sid=1000010000&
 /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
 /rhn/systems/details/packages/InstallPackages.do?sid=1000010000&
+/rhn/systems/details/DeleteConfirm.do?sid=1000010000
 /rhn/systems/details/packages/VerifyPackages.do?sid=1000010000&
 /rhn/systems/details/packages/LockPackages.do?sid=1000010000&
 /rhn/systems/details/packages/profiles/ShowProfiles.do?sid=1000010000&
+/rhn/systems/details/packages/profiles/Create.do?sid=1000010003
 /rhn/systems/details/packages/ExtraPackagesList.do?sid=1000010000&
-/rhn/systems/details/DeleteConfirm.do?sid=1000010000
 /rhn/systems/details/SystemChannels.do?sid=1000010000&
 /rhn/systems/details/SPMigration.do?sid=1000010000&
 /rhn/systems/details/SoftwareCrashes.do?sid=1000010000&
+
+// CONFIGURATION
 /rhn/systems/details/configuration/Overview.do?sid=1000010000&
 /rhn/systems/details/configuration/ViewModifyCentralPaths.do?sid=1000010000&
 /rhn/systems/details/configuration/ViewModifyLocalPaths.do?sid=1000010000&
@@ -67,23 +73,65 @@
 /rhn/systems/details/configuration/ConfigChannelList.do?sid=1000010000&
 /rhn/systems/details/configuration/SubscriptionsSetup.do?sid=1000010000&
 /rhn/systems/details/configuration/RankChannels.do?sid=1000010000&
+
+// PROVISIONING
 /rhn/systems/details/kickstart/ScheduleWizard.do?sid=1000010000&
 /rhn/systems/details/kickstart/PowerManagement.do?sid=1000010000&
 /rhn/systems/details/history/snapshots/Index.do?sid=1000010000&
 /rhn/systems/details/history/snapshots/Tags.do?sid=1000010000&
+
+// GROUPS
 /rhn/systems/details/groups/ListRemove.do?sid=1000010000&
 /rhn/systems/details/groups/Add.do?sid=1000010000&
+
+// AUDIT
 /rhn/systems/details/audit/ListScap.do?sid=1000010000&
 /rhn/systems/details/audit/ScheduleXccdf.do?sid=1000010000&
+
+// EVENTS
 /rhn/systems/details/history/Pending.do?sid=1000010000&
 /rhn/systems/details/history/History.do?sid=1000010000&
 
 
-@ SYSTEM DETAILS (SALT SYSTEM: ID OF SECOND REGISTERED SYSTEM)
-/rhn/manager/systems/details/packages?sid=1000010004&
-/rhn/manager/systems/details/custom?sid=1000010004&
-/rhn/manager/systems/details/highstate?sid=1000010004&
-/rhn/manager/systems/details/formulas?sid=1000010004&
+
+@ SYSTEM DETAILS (SALT SYSTEMS)
+//Overview Tabs
+/rhn/systems/details/Overview.do?sid=1000010000
+/rhn/systems/details/Edit.do?sid=1000010000&
+/rhn/systems/details/SystemRemoteCommand.do?sid=1000010000&
+/rhn/systems/details/SystemHardware.do?sid=1000010000&
+/rhn/systems/details/SystemMigrate.do?sid=1000010000&
+/rhn/systems/details/Notes.do?sid=1000010000&
+/rhn/systems/details/ListCustomData.do?sid=1000010000&
+
+// SOFTWARE TABS
+/rhn/manager/systems/details/packages?sid=1000010000&
+/rhn/systems/details/ErrataList.do?sid=1000010000&
+/rhn/systems/details/packages/PackageList.do?sid=1000010000&
+/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
+/rhn/systems/details/packages/InstallPackages.do?sid=1000010000&
+/rhn/systems/details/DeleteConfirm.do?sid=1000010000
+/rhn/systems/details/packages/ExtraPackagesList.do?sid=1000010000&
+/rhn/systems/details/SystemChannels.do?sid=1000010000&
+/rhn/systems/details/SPMigration.do?sid=1000010000&
+
+// GROUPS
+/rhn/systems/details/groups/ListRemove.do?sid=1000010000&
+/rhn/systems/details/groups/Add.do?sid=1000010000&
+
+// AUDIT
+/rhn/systems/details/audit/ListScap.do?sid=1000010000&
+/rhn/systems/details/audit/ScheduleXccdf.do?sid=1000010000&
+
+// STATES
+/rhn/manager/systems/details/packages?sid=1000010000&
+/rhn/manager/systems/details/custom?sid=1000010000&
+/rhn/manager/systems/details/highstate?sid=1000010000&
+/rhn/manager/systems/details/formulas?sid=1000010000&
+
+// EVENTS
+/rhn/systems/details/history/Pending.do?sid=1000010000&
+/rhn/systems/details/history/History.do?sid=1000010000&
 
 
 @ SYSTEM GROUPS
