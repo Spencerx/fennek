@@ -21,6 +21,9 @@ Devel & Research:
 * Run tests from a User perspective (Click buttons, follow links, and return results)   
 * Diff reference images from a former run allowing for pass/fail checks 
 
+## Example Images
+!Folder Structure](folder_structure.png)
+
 
 ## Overview
 * Install server certificates with: ```./fennek-certificates.sh```
