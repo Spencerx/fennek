@@ -47,13 +47,13 @@ casper.thenOpen(url + '/rhn/admin/setup/SUSEProducts.do', function() {
 
             for (var i = 0; i < productRows.length; i++) {
                 if (i < keep) continue;
-                productRows[i];//.remove();
+                productRows[i].remove();
                 //remove(productRows[i]);
             }
-            var maxLength = document.querySelectorAll('tr');
-            for (var v = maxLength; v < maxLength - 20; v--){
-                productRows[v].remove();
-            }
+          //  var maxLength = document.querySelectorAll('tr');
+          //  for (var v = maxLength; v < maxLength - 20; v--){
+           //     productRows[v].remove();
+          //  }
 
 
             return str;
