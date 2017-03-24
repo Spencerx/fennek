@@ -29,7 +29,7 @@ Admin folder contents:
 ![Admin Folder](admin_captures.png)
 
 Admin > Setup Wizard > SUSE Products:
-![Setup Wizard](setup_Wizard.png)
+![Setup Wizard](setup_wizard.png)
 
 ## Overview
 * Install server certificates with: ```./fennek-certificates.sh```
