@@ -76,11 +76,13 @@ For example:
 ``` 
 
 ## Set Generated Minion and Traditional System ID's
+The following ids are genereated when a system is registered with SUSE Manager. Once you have registered a traditional or Salt system browse to systems > system details page and check url for sid and add it to one of the following two variables.
+
 ```
-// To access generated system details enter your Salt Minion's sid: Example: https://doc-testing.tf.local/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
+// To capture generated system details enter your Salt minion's sid: Example: https://doc-testing.tf.local/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
 var saltSid = '1000010000&'
 
-// Enter your Salt Minion id: Example: https://doc-testing.tf.local/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
+// To capture generated system details enter your traditional systems sid: Example: https://doc-testing.tf.local/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
 var tradSid = '1000010000&'
 ```
 
