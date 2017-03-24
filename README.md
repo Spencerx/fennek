@@ -22,7 +22,7 @@ Devel & Research:
 * Diff reference images from a former run allowing for pass/fail checks 
 
 ## Example Images
-!Folder Structure](folder_structure.png)
+![Folder Structure](folder_structure.png)
 
 
 ## Overview
