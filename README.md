@@ -22,8 +22,14 @@ Devel & Research:
 * Diff reference images from a former run allowing for pass/fail checks 
 
 ## Example Images
+fennek-recon output:
 ![App_Structure](app_structure_output.png)
 
+Admin folder contents:
+![Admin Folder](admin_captures.png)
+
+Admin > Setup Wizard > SUSE Products:
+![Setup Wizard](setup_Wizard.png)
 
 ## Overview
 * Install server certificates with: ```./fennek-certificates.sh```
