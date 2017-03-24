@@ -22,7 +22,7 @@ Devel & Research:
 * Diff reference images from a former run allowing for pass/fail checks 
 
 ## Example Images
-![App_Structure Output](app_structure_output.png)
+![App_Structure](app_structure_output.png)
 
 
 ## Overview
