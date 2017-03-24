@@ -75,6 +75,15 @@ For example:
  var url = 'https://doctesting-suma3pg.tf.local';    
 ``` 
 
+## Set Generated Minion and Traditional System ID's
+```
+// To access generated system details enter your Salt Minion's sid: Example: https://doc-testing.tf.local/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
+var saltSid = '1000010000&'
+
+// Enter your Salt Minion id: Example: https://doc-testing.tf.local/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
+var tradSid = '1000010000&'
+```
+
 ## Begin Reconnaissance
 
 * Execute ```./fennek-recon.sh``` from CLI to begin reconnaissance.  
