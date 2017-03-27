@@ -5,8 +5,10 @@
 var casper;
 casper = require('casper').create({
     viewportSize: {
+
         width: 1024,
         height: 768
+
     },
     exitOnError: false,
     verbose: true,
@@ -28,10 +30,12 @@ casper.libraryPath = '/docmodules';
 // Enter your SUSE Manager Test Server URL
 var url = 'https://doctesting-suma3pg.tf.local';
 
-// To access system details enter your Salt Minion sid: Example: https://example.suse.de/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
+// To access system details enter your Salt Minion test client sid:
+// Example: https://example.suse.de/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
 var saltSid = '1000010000&'
 
-// Enter your Salt Minion id: Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
+// To access system details enter Traidtional System test client sid:
+// Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
 var tradSid = '1000010000&'
 
 // Login to SUSE Manager
@@ -69,7 +73,7 @@ casper.thenEvaluate(function(){
 */
 
 // SUSE Manager test setup modules for normal components
-phantom.injectJs('docmodules/nav_side_bar.js');
+//phantom.injectJs('docmodules/nav_side_bar.js');
 phantom.injectJs('docmodules/home.js');
 phantom.injectJs('docmodules/systems.js');
 phantom.injectJs('docmodules/system_groups.js');
