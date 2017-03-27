@@ -5,8 +5,8 @@
 var casper;
 casper = require('casper').create({
     viewportSize: {
-        width: 1920,
-        height: 1080
+        width: 1024,
+        height: 768
     },
     exitOnError: false,
     verbose: true,
@@ -66,8 +66,6 @@ casper.thenEvaluate(function(){
 
  systems_systems_physical_systems.png
 
- This naming scheme prevents overwriting of other images.
- TODO: Add logic ensuring we do not overwrite an image or increment by number
 */
 
 // SUSE Manager test setup modules for normal components
@@ -92,7 +90,7 @@ phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/users.js');
- phantom.injectJs('docmodules/admin.js');
+phantom.injectJs('docmodules/admin.js');
 phantom.injectJs('docmodules/help.js');
 
 // SUSE Manager test setup modules for generated javascript components
