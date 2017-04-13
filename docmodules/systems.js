@@ -5,6 +5,11 @@
 The following CapserJS functions are injected into the main screen generation script during runtime.
 */
 
+// Systems: Overview
+casper.thenOpen(url + "/rhn/systems/Overview.do", function() {
+    this.captureSelector("images/systems/systems_overview.png", '#spacewalk-content')});
+
+
 // Systems: All
 casper.thenOpen(url + "/rhn/systems/SystemList.do", function() {
     this.captureSelector("images/systems/systems_all.png", '#spacewalk-content')});

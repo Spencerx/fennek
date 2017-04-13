@@ -6,7 +6,7 @@
 
 // Systems: SSM: Overview
 casper.thenOpen(url + '/rhn/ssm/index.do', function() {
-    this.captureSelector('images/systems/system-set-manager/systems_ssm_overview.png', '#spacewalk-content', '#spacewalk-content')
+    this.captureSelector('images/systems/system-set-manager/systems_ssm_overview.png', '#spacewalk-content')
 });
 
 // Systems: SSM: Systems: List Selected Systems
@@ -51,7 +51,7 @@ casper.thenOpen(url + '/rhn/systems/ssm/groups/Manage.do', function() {
 
 // Systems: SSM: Channels
 casper.thenOpen(url + '/rhn/channel/ssm/ChildSubscriptions.do', function() {
-    this.captureSelector('images/systems/system-set-manager/systems_ssm_overview.png', '#spacewalk-content')
+    this.captureSelector('images/systems/system-set-manager/systems_ssm_child_subscriptions.png', '#spacewalk-content')
 });
 
 // Systems: SSM: Channels: Base Channels

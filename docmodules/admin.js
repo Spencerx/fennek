@@ -30,7 +30,7 @@ casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
 // Care with this section, pain will follow.
 casper.thenOpen(url + '/rhn/admin/setup/SUSEProducts.do', function() {
     this.echo(this.getTitle(), 'INFO: ');
-    //wait 30 seconds to for SUSE Products list to load
+    //wait 50 seconds to for SUSE Products list to load
     this.waitForSelector('.product-add-btn', function () {
 
         //load page in sandbox context

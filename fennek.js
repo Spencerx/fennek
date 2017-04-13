@@ -16,10 +16,12 @@ casper = require('casper').create({
     //loadImages: true,
     //loadPlugins: true,
     //localToRemoteUrlAccessEnabled: true,
-    userAgent: 'Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.98 Safari/537.36',
+    userAgent: 'Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36',
     //XSSAuditingEnabled: false,
     logLevel: 'debug'
 });
+
+
 
 // Add the modules path
 casper.libraryPath = '/docmodules';
@@ -30,11 +32,11 @@ var url = 'https://doctesting-suma3pg.tf.local';
 
 // To access system details enter your Salt Minion test client sid:
 // Example: https://example.suse.de/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var saltSid = '1000010000&'
+var saltSid = '1000010004'
 
 // To access system details enter Traidtional System test client sid:
 // Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var tradSid = '1000010000&'
+var tradSid = '1000010003&'
 
 // Login to SUSE Manager
 casper.start(url, function() {
@@ -74,8 +76,11 @@ casper.thenEvaluate(function(){
 
 // SUSE Manager test setup modules for normal components
 //phantom.injectJs('docmodules/nav_side_bar.js');
-phantom.injectJs('docmodules/home.js');
+
+phantom.injectJs('docmodules/navbar.js');
+
 /*
+phantom.injectJs('docmodules/home.js');
 phantom.injectJs('docmodules/systems.js');
 phantom.injectJs('docmodules/system_groups.js');
 phantom.injectJs('docmodules/system_set_manager.js');
@@ -98,10 +103,13 @@ phantom.injectJs('docmodules/users.js');
 phantom.injectJs('docmodules/admin.js');
 phantom.injectJs('docmodules/help.js');
 */
+
+/*
+
 // SUSE Manager test setup modules for generated javascript components
 phantom.injectJs('docmodules/system_details_salt.js');
-//phantom.injectJs('docmodules/system_details_traditional.js');
-
+phantom.injectJs('docmodules/system_details_traditional.js');
+*/
 
 casper.run();
 /*

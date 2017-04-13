@@ -37,7 +37,7 @@ casper.thenOpen(url + '/rhn/systems/details/SystemRemoteCommand.do?sid=' + tradS
 // Systems > System Details > Activation
 casper.thenOpen(url + '/rhn/systems/details/Activation.do?sid=' + tradSid, function() {
     this.echo(this.getTitle(), 'INFO: ');
-    this.captureSelector('images/systems/systems-details/traditional/system_details_traditional_hardware.png',
+    this.captureSelector('images/systems/systems-details/traditional/system_details_reactivation.png',
         '#spacewalk-content')
 });
 

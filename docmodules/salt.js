@@ -9,10 +9,11 @@ casper.thenOpen(url + '/rhn/manager/minions', function() {
 
 // Salt Remote Commands
 casper.thenOpen(url + '/rhn/manager/minions/cmd', function() {
-    //wait 1 second to pickup preview button
-    this.wait(1000, function ()
+    //wait 5 second to pickup preview button
+    this.wait(5000, function ()
     {
         this.captureSelector('images/salt/remote_commands.png', '#spacewalk-content')
+        this.wait(5000);
     });
 });
 
