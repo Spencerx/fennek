@@ -74,6 +74,42 @@ casper.thenOpen(url + '/rhn/admin/multiorg/OrgCreate.do', function() {
         '#spacewalk-content')
 });
 
+// Admin > Organizations > Org Details
+casper.thenOpen(url + '/rhn/admin/multiorg/OrgDetails.do?oid=1', function() {
+    this.echo(this.getTitle(), 'INFO: ');
+    this.captureSelector('images/admin/admin_organization_details.png',
+        '#spacewalk-content')
+});
+
+// Admin > Organizations > Org Users
+casper.thenOpen(url + '/rhn/admin/multiorg/OrgUsers.do?oid=1', function() {
+    this.echo(this.getTitle(), 'INFO: ');
+    this.captureSelector('images/admin/admin_organization_users.png',
+        '#spacewalk-content')
+});
+
+
+// Admin > Organizations > Org Trusts
+casper.thenOpen(url + '/rhn/admin/multiorg/OrgTrusts.do?oid=1', function() {
+    this.echo(this.getTitle(), 'INFO: ');
+    this.captureSelector('images/admin/admin_organization_trusts.png',
+        '#spacewalk-content')
+});
+
+// Admin > Organizations > Org Configuration
+casper.thenOpen(url + '/rhn/admin/multiorg/OrgConfigDetails.do?oid=1', function() {
+    this.echo(this.getTitle(), 'INFO: ');
+    this.captureSelector('images/admin/admin_organization_configuration.png',
+        '#spacewalk-content')
+});
+
+// Admin > Organizations > Org Configuration
+casper.thenOpen(url + '/rhn/manager/multiorg/details/custom?oid=1', function() {
+    this.echo(this.getTitle(), 'INFO: ');
+    this.captureSelector('images/admin/admin_organization_states.png',
+        '#spacewalk-content')
+});
+
 // Admin > Users
 casper.thenOpen(url + '/rhn/admin/multiorg/Users.do', function() {
     this.echo(this.getTitle(), 'INFO: ');
