@@ -78,10 +78,10 @@ casper.thenEvaluate(function(){
 //phantom.injectJs('docmodules/nav_side_bar.js');
 
 
-phantom.injectJs('docmodules/navbar.js');
+phantom.injectJs('docmodules/admin.js');
 
 /*
-
+ phantom.injectJs('docmodules/navbar.js');
 phantom.injectJs('docmodules/home.js');
 phantom.injectJs('docmodules/systems.js');
 phantom.injectJs('docmodules/system_groups.js');
@@ -102,7 +102,7 @@ phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/users.js');
-phantom.injectJs('docmodules/admin.js');
+
 phantom.injectJs('docmodules/help.js');
 
 */
