@@ -39,6 +39,42 @@ casper.thenOpen(url + '/rhn/users/UserList.do', function() {
         '#spacewalk-content')
 });
 
+// Users: User Details
+casper.thenOpen(url + '/rhn/users/UserDetails.do?uid=1', function() {
+    this.captureSelector('images/users/users_user_details.png',
+        '#spacewalk-content')
+});
+
+// Users: User Details: system groups
+casper.thenOpen(url + '/rhn/users/AssignedSystemGroups.do?uid=1', function() {
+    this.captureSelector('images/users/users_details_system_groups.png',
+        '#spacewalk-content')
+});
+
+// Users: User Details: systems
+casper.thenOpen(url + '/rhn/users/SystemsAdmined.do?uid=1', function() {
+    this.captureSelector('images/users/users_details_systems.png',
+        '#spacewalk-content')
+});
+
+// Users: User Details: channel permissions
+casper.thenOpen(url + '/rhn/users/ChannelPerms.do?uid=1', function() {
+    this.captureSelector('images/users/users_details_channel_permissions.png',
+        '#spacewalk-content')
+});
+
+// Users: User Details: preferences
+casper.thenOpen(url + '/rhn/users/UserPreferences.do?uid=1', function() {
+    this.captureSelector('images/users/users_details_preferences.png',
+        '#spacewalk-content')
+});
+
+// Users: User Details: Addresses
+casper.thenOpen(url + '/rhn/users/Addresses.do?uid=1', function() {
+    this.captureSelector('images/users/users_details_addresses.png',
+        '#spacewalk-content')
+});
+
 // Users: System Group Config
 casper.thenOpen(url + '/rhn/users/SystemGroupConfig.do', function() {
     this.captureSelector('images/users/users_system_group_config.png',

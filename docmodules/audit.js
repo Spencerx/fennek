@@ -18,6 +18,16 @@ casper.thenOpen(url + '/rhn/manager/subscription-matching', function() {
     });
 });
 
+// Audit: Subscription Matching gather-matcher-default
+casper.thenOpen(url + '/rhn/admin/ScheduleDetail.do?schid=21', function() {
+    //wait 1 second to pickup preview button
+    this.wait(1000, function ()
+    {
+        this.captureSelector('images/audit/audit_subscription_matching_gatherer_matcher_default.png',
+            '#spacewalk-content')
+    });
+});
+
 // Audit: Subscription Matching Unmatched Products
 casper.thenOpen(url + '/rhn/manager/subscription-matching#unmatched-products', function() {
     //wait 1 second to pickup preview button
@@ -48,10 +58,15 @@ casper.thenOpen(url + '/rhn/manager/subscription-matching#messages', function() 
     });
 });
 
-
 // Audit: OpenSCAP List Scans
 casper.thenOpen(url + '/rhn/audit/ListXccdf.do', function() {
     this.captureSelector('images/audit/openscap/audit_openscap_list_scans.png',
+        '#spacewalk-content')
+});
+
+// Audit: OpenSCAP List Scans
+casper.thenOpen(url + '/rhn/systems/details/audit/ScheduleXccdf.do?sid=1000010004&', function() {
+    this.captureSelector('images/audit/openscap/audit_openscap_schedule_scan.png',
         '#spacewalk-content')
 });
 
