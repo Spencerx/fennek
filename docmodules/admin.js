@@ -55,7 +55,7 @@ casper.thenOpen(url + '/rhn/admin/setup/SUSEProducts.do', function() {
         console.log(str);
         this.captureSelector('images/admin/admin_suse_products.png',
             '#spacewalk-content');
-    },undefined,50000);
+    },undefined,100000);
 
 });
 
