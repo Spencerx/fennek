@@ -1,38 +1,6 @@
 /**
  * Created by coyote on 3/16/17.
  */
-// Patches: Relevant Patches
-// Care with this section, pain will follow.
-casper.thenOpen(url + '/rhn/errata/RelevantErrata.do', function() {
-    this.echo(this.getTitle(), 'INFO: ');
-    //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('SUSE-12-SP1-2016-1017', function () {
-
-        //load page in sandbox context
-        var str = this.evaluate(function () {
-            var str = "";
-            var keep = 10;
-
-            var patchRows = document.querySelectorAll('tbody>tr');
-
-            str += "Number of rows found" + '\n';
-            str += patchRows + '\n';
-            str += patchRows.length + '\n';
-
-            for (var i = 0; i < patchRows.length; i++) {
-                if (i < keep) continue;
-                patchRows[i].remove();
-
-            }
-            return str;
-        });
-       //
-        console.log(str);
-        this.captureSelector('images/patches/patches_relevant_patches.png',
-            '#spacewalk-content');
-    },undefined,50000);
-
-});
 
 // Patches: All Patches
 // Care with this section, pain will follow.
@@ -67,6 +35,38 @@ casper.thenOpen(url + '/rhn/errata/AllErrata.do', function() {
 
 });
 
+// Patches: Relevant Patches
+// Care with this section, pain will follow.
+casper.thenOpen(url + '/rhn/errata/RelevantErrata.do', function() {
+    this.echo(this.getTitle(), 'INFO: ');
+    //wait 50 seconds to for SUSE Patch list to load
+    this.waitForText('SUSE-12-SP1-2016-1017', function () {
+
+        //load page in sandbox context
+        var str = this.evaluate(function () {
+            var str = "";
+            var keep = 10;
+
+            var patchRows = document.querySelectorAll('tbody>tr');
+
+            str += "Number of rows found" + '\n';
+            str += patchRows + '\n';
+            str += patchRows.length + '\n';
+
+            for (var i = 0; i < patchRows.length; i++) {
+                if (i < keep) continue;
+                patchRows[i].remove();
+
+            }
+            return str;
+        });
+        //
+        console.log(str);
+        this.captureSelector('images/patches/patches_relevant_patches.png',
+            '#spacewalk-content');
+    },undefined,50000);
+
+});
 
 // Patches: Relevant Bug Patches
 // Care with this section, pain will follow.
@@ -134,7 +134,7 @@ casper.thenOpen(url + '/rhn/errata/RelevantEnhancementErrata.do?', function() {
 
 });
 
-// Patches: Security Patches
+// Patches: Relevant Security Patches
 // Care with this section, pain will follow.
 casper.thenOpen(url + '/rhn/errata/RelevantSecurityErrata.do?', function() {
     this.echo(this.getTitle(), 'INFO: ');
@@ -200,17 +200,37 @@ casper.thenOpen(url + '/rhn/errata/AllBugErrata.do?', function() {
 
 });
 
-// Patches: All Bug Patches
-//casper.thenOpen(url + '/rhn/errata/AllBugErrata.do?', function() {
-//    this.captureSelector('images/patches/patches_all_bug_patches.png',
-//        '#spacewalk-content')
-//});
-
-/*
-// Patches: All Security Patches
+// Patches: All security patches
+// Care with this section, pain will follow.
 casper.thenOpen(url + '/rhn/errata/AllSecurityErrata.do?', function() {
-    this.captureSelector('images/patches/patches_all_security_patches.png',
-        '#spacewalk-content')
+    this.echo(this.getTitle(), 'INFO: ');
+    //wait 50 seconds to for SUSE Patch list to load
+    this.waitForText('Download CSV', function () {
+
+        //load page in sandbox context
+        var str = this.evaluate(function () {
+            var str = "";
+            var keep = 5;
+
+            var allSecurityPatchRows = document.querySelectorAll('tbody>tr');
+
+            str += "Number of rows found" + '\n';
+            str += allSecurityPatchRows + '\n';
+            str += allSecurityPatchRows.length + '\n';
+
+            for (var i = 0; i < allSecurityPatchRows.length; i++) {
+                if (i < keep) continue;
+                allSecurityPatchRows[i].remove();
+
+            }
+            return str;
+        });
+
+        console.log(str);
+        this.captureSelector('images/patches/patches_all_security_patches.png',
+            '#spacewalk-content');
+    },undefined,50000);
+
 });
 
 // Patches: Advanced Patch Search
@@ -219,11 +239,41 @@ casper.thenOpen(url + '/rhn/errata/Search.do', function() {
         '#spacewalk-content')
 });
 
+
 // Patches: Published Patches
+// Care with this section, pain will follow.
 casper.thenOpen(url + '/rhn/errata/manage/PublishedErrata.do', function() {
-    this.captureSelector('images/patches/patches_published_patches.png',
-        '#spacewalk-content')
+    this.echo(this.getTitle(), 'INFO: ');
+    //wait 50 seconds to for SUSE Patch list to load
+    this.waitForText('Download CSV', function () {
+
+        //load page in sandbox context
+        var str = this.evaluate(function () {
+            var str = "";
+            var keep = 10;
+
+            var publishedPatchesRows = document.querySelectorAll('tbody>tr');
+
+            str += "Number of rows found" + '\n';
+            str += publishedPatchesRows + '\n';
+            str += publishedPatchesRows.length + '\n';
+
+            for (var i = 0; i < publishedPatchesRows.length; i++) {
+                if (i < keep) continue;
+                publishedPatchesRows[i].remove();
+
+            }
+            return str;
+        });
+
+        console.log(str);
+        this.captureSelector('images/patches/patches_published_patches.png',
+            '#spacewalk-content');
+    },undefined,50000);
+
 });
+
+
 
 // Patches: Create a Patch
 casper.thenOpen(url + '/rhn/errata/manage/Create.do', function() {
@@ -242,4 +292,4 @@ casper.thenOpen(url + '/rhn/errata/manage/CloneErrata.do', function() {
     this.captureSelector('images/patches/patches_clone_patches.png',
         '#spacewalk-content')
 });
-*/
+
