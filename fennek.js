@@ -78,7 +78,6 @@ casper.thenEvaluate(function(){
 //phantom.injectJs('docmodules/nav_side_bar.js');
 
 phantom.injectJs('docmodules/channels.js');
-/*
 phantom.injectJs('docmodules/audit.js');
 phantom.injectJs('docmodules/admin.js');
 phantom.injectJs('docmodules/navbar.js');
@@ -101,15 +100,15 @@ phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/help.js');
-*/
 
 
-/*
+
+
 
 // SUSE Manager test setup modules for generated javascript components
 phantom.injectJs('docmodules/system_details_salt.js');
 phantom.injectJs('docmodules/system_details_traditional.js');
-*/
+
 
 casper.run();
 /*
