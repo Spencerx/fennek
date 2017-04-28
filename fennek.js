@@ -77,7 +77,7 @@ casper.thenEvaluate(function(){
 // SUSE Manager test setup modules for normal components
 //phantom.injectJs('docmodules/nav_side_bar.js');
 
-phantom.injectJs('docmodules/patches.js');
+phantom.injectJs('docmodules/channels.js');
 /*
 phantom.injectJs('docmodules/audit.js');
 phantom.injectJs('docmodules/admin.js');
@@ -95,8 +95,7 @@ phantom.injectJs('docmodules/software_crashes.js');
 phantom.injectJs('docmodules/virtual_host_manager.js');
 phantom.injectJs('docmodules/salt.js');
 phantom.injectJs('docmodules/images.js');
-
-phantom.injectJs('docmodules/channels.js');
+phantom.injectJs('docmodules/patches.js');
 phantom.injectJs('docmodules/users.js');
 phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/configuration.js');
