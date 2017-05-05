@@ -34,11 +34,11 @@ var url = 'https://doctesting-suma3pg.tf.local';
 
 // To access system details enter your Salt Minion test client sid:
 // Example: https://example.suse.de/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var saltSid = '1000010004'
+var saltSid = '1000010004';
 
 // To access system details enter Traidtional System test client sid:
 // Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var tradSid = '1000010003&'
+var tradSid = '1000010003&';
 
 // Login to SUSE Manager
 casper.start(url, function() {
@@ -67,11 +67,9 @@ casper.thenEvaluate(function(){
  EXAMPLE: //phantom.injectJs('docmodules/activation_keys.js');
 
  Generated image naming conventions should match that of the application folder structure they are generated in.
- For example:
- systems > systems > physical systems in the webui should match an image named:
+ For example: systems > systems > physical systems in the webui should match an image named:
 
  systems_systems_physical_systems.png
-
 */
 
 // SUSE Manager test setup modules for normal components

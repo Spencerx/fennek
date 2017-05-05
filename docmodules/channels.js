@@ -91,3 +91,40 @@ casper.thenOpen(url + '/rhn/channels/manage/DistChannelMapEdit.do', function() {
     this.captureSelector('images/channels/channels_create_distribution_channel_map.png',
         '#spacewalk-content')
 });
+
+// Channels: Channel Details
+casper.thenOpen(url + '/rhn/channels/manage/Edit.do?cid=101', function() {
+    this.captureSelector('images/channels/channels_details_channels.png',
+        '#spacewalk-content')
+});
+
+// Channels: Channel Managers
+casper.thenOpen(url + '/rhn/channels/manage/Managers.do?cid=101', function() {
+    this.captureSelector('images/channels/channels_details_managers_channels.png',
+        '#spacewalk-content')
+});
+
+// Channels: Channel Details Patches
+casper.thenOpen(url + '/rhn/channels/manage/errata/Errata.do?cid=101', function() {
+    this.captureSelector('images/channels/channels_details_patches_channels.png',
+        '#spacewalk-content')
+});
+
+// Channels: Channel Details Packages
+casper.thenOpen(url + '/rhn/channels/manage/ChannelPackageMenu.do?cid=101', function() {
+    this.captureSelector('images/channels/channels_details_packages_channels.png',
+        '#spacewalk-content')
+});
+
+// Channels: Channel Details Repositories
+casper.thenOpen(url + '/rhn/channels/manage/Repositories.do?cid=101', function() {
+    this.captureSelector('images/channels/channels_details_repositories.png',
+        '#spacewalk-content')
+});
+
+// Channels: Channel Details Sync
+casper.thenOpen(url + '/rhn/channels/manage/Sync.do?cid=101', function() {
+    this.captureSelector('images/channels/channels_details_sync_channels.png',
+        '#spacewalk-content')
+});
+
