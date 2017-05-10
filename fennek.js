@@ -15,8 +15,8 @@ casper = require('casper').create({
     js_errors: true,
     debug: true,
     javascriptEnabled: true,
-    //loadImages: true,
-    //loadPlugins: true,
+    loadImages: true,
+    loadPlugins: true,
     //localToRemoteUrlAccessEnabled: true,
     userAgent: 'Mozilla/5.0 (X11; CrOS x86_64 8172.45.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.110 Safari/537.36',
     //XSSAuditingEnabled: false,
@@ -74,15 +74,15 @@ casper.thenEvaluate(function(){
 
 // SUSE Manager test setup modules for normal components
 //phantom.injectJs('docmodules/nav_side_bar.js');
-
-
-phantom.injectJs('docmodules/navbar.js');
+//phantom.injectJs('docmodules/visualization.js');
+phantom.injectJs('docmodules/systems.js');
 /*
+phantom.injectJs('docmodules/navbar.js');
 phantom.injectJs('docmodules/channels.js');
 phantom.injectJs('docmodules/audit.js');
 phantom.injectJs('docmodules/admin.js');
 phantom.injectJs('docmodules/home.js');
-phantom.injectJs('docmodules/systems.js');
+
 phantom.injectJs('docmodules/system_groups.js');
 phantom.injectJs('docmodules/system_set_manager.js');
 phantom.injectJs('docmodules/advanced_search.js');
@@ -96,7 +96,7 @@ phantom.injectJs('docmodules/salt.js');
 phantom.injectJs('docmodules/images.js');
 phantom.injectJs('docmodules/patches.js');
 phantom.injectJs('docmodules/users.js');
-phantom.injectJs('docmodules/visualization.js');
+
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/help.js');
@@ -112,9 +112,3 @@ phantom.injectJs('docmodules/help.js');
 
 
 casper.run();
-/*
-Spoke with Moio regarding doc test setup for providing UI data in screenshots
- Simplest to use xmlrpc api scripts + spacecmd scripts on top of sumaform
-  with cloned channels tied to fixed dates. This kind of scripting would provide predictable results
-  We will work over this in April during Workshop. Book a night so we can meet over a beer. April 24-28
- */
