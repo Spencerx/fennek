@@ -36,7 +36,7 @@ Admin > Setup Wizard > SUSE Products:
 * Capture images with: ```./fennek-recon.js```
 * Migrate images for use with DAPS: ```./fennek-docbook.js```
 
-
+## Note: fennek requires leap 42.2 or higher.
 ## Get It!
 * **Clone this repository:**  
 ```git clone https://github.com/openSUSE/fennek.git && cd fennek```
