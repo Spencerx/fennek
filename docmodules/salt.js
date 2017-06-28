@@ -3,12 +3,12 @@
  */
 
 // Salt Onboarding
-casper.thenOpen(url + '/rhn/manager/minions', function() {
+casper.thenOpen(url + '/rhn/manager/systems/keys', function() {
     this.captureSelector('images/salt/onboarding.png', '#spacewalk-content')
 });
 
 // Salt Remote Commands
-casper.thenOpen(url + '/rhn/manager/minions/cmd', function() {
+casper.thenOpen(url + '/rhn/manager/systems/cmd', function() {
     //wait 5 second to pickup preview button
     this.wait(5000, function ()
     {
@@ -18,7 +18,7 @@ casper.thenOpen(url + '/rhn/manager/minions/cmd', function() {
 });
 
 // Salt Bootstrapping
-casper.thenOpen(url + '/rhn/manager/minions/bootstrap', function() {
+casper.thenOpen(url + '/rhn/manager/systems/bootstrap', function() {
     this.captureSelector('images/salt/bootstrapping.png', '#spacewalk-content')
 });
 

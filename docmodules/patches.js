@@ -6,8 +6,9 @@
 // Care with this section, pain will follow.
 casper.thenOpen(url + '/rhn/errata/AllErrata.do', function() {
     this.echo(this.getTitle(), 'INFO: ');
+
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('Download CSV', function () {
+   /* this.waitForText('Download CSV', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -27,11 +28,12 @@ casper.thenOpen(url + '/rhn/errata/AllErrata.do', function() {
             }
             return str;
         });
+        */
         //
-        console.log(str);
+        //console.log(str);
         this.captureSelector('images/patches/patches_all_patches.png',
             '#spacewalk-content');
-    },undefined,50000);
+   // },undefined,50000);
 
 });
 
@@ -40,7 +42,7 @@ casper.thenOpen(url + '/rhn/errata/AllErrata.do', function() {
 casper.thenOpen(url + '/rhn/errata/RelevantErrata.do', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('SUSE-12-SP1-2016-1017', function () {
+   /* this.waitForText('SUSE-12-SP1-2016-1017', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -62,9 +64,10 @@ casper.thenOpen(url + '/rhn/errata/RelevantErrata.do', function() {
         });
         //
         console.log(str);
+        */
         this.captureSelector('images/patches/patches_relevant_patches.png',
             '#spacewalk-content');
-    },undefined,50000);
+   // },undefined,100000);
 
 });
 
@@ -73,7 +76,7 @@ casper.thenOpen(url + '/rhn/errata/RelevantErrata.do', function() {
 casper.thenOpen(url + '/rhn/errata/RelevantBugErrata.do?', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('Download CSV', function () {
+  /*  this.waitForText('Download CSV', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -95,9 +98,10 @@ casper.thenOpen(url + '/rhn/errata/RelevantBugErrata.do?', function() {
         });
         //
         console.log(str);
+        */
         this.captureSelector('images/patches/patches_relevant_bug__patches.png',
         '#spacewalk-content');
-    },undefined,50000);
+   // },undefined,100000);
 
 });
 
@@ -106,7 +110,7 @@ casper.thenOpen(url + '/rhn/errata/RelevantBugErrata.do?', function() {
 casper.thenOpen(url + '/rhn/errata/RelevantEnhancementErrata.do?', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('Download CSV', function () {
+   /* this.waitForText('Download CSV', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -128,9 +132,10 @@ casper.thenOpen(url + '/rhn/errata/RelevantEnhancementErrata.do?', function() {
         });
 
         console.log(str);
+        */
         this.captureSelector('images/patches/patches_relevant_enhancement_patches.png',
             '#spacewalk-content');
-    },undefined,50000);
+   // },undefined,100000);
 
 });
 
@@ -139,7 +144,7 @@ casper.thenOpen(url + '/rhn/errata/RelevantEnhancementErrata.do?', function() {
 casper.thenOpen(url + '/rhn/errata/RelevantSecurityErrata.do?', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('Download CSV', function () {
+   /* this.waitForText('Download CSV', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -161,9 +166,10 @@ casper.thenOpen(url + '/rhn/errata/RelevantSecurityErrata.do?', function() {
         });
 
         console.log(str);
+        */
         this.captureSelector('images/patches/patches_security_patches.png',
         '#spacewalk-content');
-    },undefined,50000);
+   // },undefined,100000);
 
 });
 
@@ -172,7 +178,7 @@ casper.thenOpen(url + '/rhn/errata/RelevantSecurityErrata.do?', function() {
 casper.thenOpen(url + '/rhn/errata/AllBugErrata.do?', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('Download CSV', function () {
+  /*  this.waitForText('Download CSV', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -194,9 +200,10 @@ casper.thenOpen(url + '/rhn/errata/AllBugErrata.do?', function() {
         });
 
         console.log(str);
+        */
         this.captureSelector('images/patches/patches_all_bug_patches.png',
             '#spacewalk-content');
-    },undefined,50000);
+   // },undefined,100000);
 
 });
 
@@ -205,7 +212,7 @@ casper.thenOpen(url + '/rhn/errata/AllBugErrata.do?', function() {
 casper.thenOpen(url + '/rhn/errata/AllSecurityErrata.do?', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('Download CSV', function () {
+  /*  this.waitForText('Download CSV', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -227,9 +234,10 @@ casper.thenOpen(url + '/rhn/errata/AllSecurityErrata.do?', function() {
         });
 
         console.log(str);
+        */
         this.captureSelector('images/patches/patches_all_security_patches.png',
             '#spacewalk-content');
-    },undefined,50000);
+  //  },undefined,100000);
 
 });
 
@@ -245,7 +253,7 @@ casper.thenOpen(url + '/rhn/errata/Search.do', function() {
 casper.thenOpen(url + '/rhn/errata/manage/PublishedErrata.do', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Patch list to load
-    this.waitForText('Download CSV', function () {
+  /*  this.waitForText('Download CSV', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -267,9 +275,10 @@ casper.thenOpen(url + '/rhn/errata/manage/PublishedErrata.do', function() {
         });
 
         console.log(str);
+        */
         this.captureSelector('images/patches/patches_published_patches.png',
             '#spacewalk-content');
-    },undefined,50000);
+ //   },undefined,100000);
 
 });
 

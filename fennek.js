@@ -38,7 +38,7 @@ var saltSid = '1000010004';
 
 // To access system details enter Traidtional System test client sid:
 // Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var tradSid = '1000010003&';
+var tradSid = '1000010003';
 
 // Login to SUSE Manager
 casper.start(url, function() {
@@ -73,6 +73,7 @@ casper.thenEvaluate(function(){
 */
 
 // SUSE Manager test setup modules for normal components
+/*
 phantom.injectJs('docmodules/nav_side_bar.js');
 phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/systems.js');
@@ -92,7 +93,9 @@ phantom.injectJs('docmodules/software_crashes.js');
 phantom.injectJs('docmodules/virtual_host_manager.js');
 phantom.injectJs('docmodules/salt.js');
 phantom.injectJs('docmodules/images.js');
+*/
 phantom.injectJs('docmodules/patches.js');
+/*
 phantom.injectJs('docmodules/users.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
@@ -101,6 +104,6 @@ phantom.injectJs('docmodules/help.js');
 // SUSE Manager test setup modules for system details components
 phantom.injectJs('docmodules/system_details_salt.js');
 phantom.injectJs('docmodules/system_details_traditional.js');
-
+*/
 
 casper.run();
