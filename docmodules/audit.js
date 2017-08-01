@@ -3,7 +3,7 @@
  */
 
 // Audit: CVE Audit
-casper.thenOpen(url + '/rhn/audit/CVEAudit.do', function() {
+casper.thenOpen(url + '/rhn/manager/audit/cve', function() {
     this.captureSelector('images/audit/audit_cve_audit.png',
         '#spacewalk-content')
 });
