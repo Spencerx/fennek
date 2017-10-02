@@ -30,7 +30,7 @@ casper.libraryPath = '/docmodules';
 //casper.options.waitTimeout = 50000;
 
 // Enter your SUSE Manager Test Server URL
-var url = 'https://doctesting-suma3pg.tf.local';
+var url = 'https://galaxy-production-suma3pg.tf.local';
 
 // To access system details enter your Salt Minion test client sid:
 // Example: https://example.suse.de/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
@@ -73,15 +73,13 @@ casper.thenEvaluate(function(){
 */
 
 // SUSE Manager test setup modules for normal components
-/*
+
 phantom.injectJs('docmodules/nav_side_bar.js');
 phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/systems.js');
 phantom.injectJs('docmodules/navbar.js');
 phantom.injectJs('docmodules/channels.js');
-*/
 phantom.injectJs('docmodules/audit.js');
-/*
 phantom.injectJs('docmodules/admin.js');
 phantom.injectJs('docmodules/home.js');
 phantom.injectJs('docmodules/system_groups.js');
