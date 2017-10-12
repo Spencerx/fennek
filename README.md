@@ -45,7 +45,7 @@ Admin > Setup Wizard > SUSE Products:
 ### Install Phantomjs and Node Package Manager (NPM)
 PhantomJS is a headless WebKit scriptable with a JavaScript API. It has fast and native support for various web standards: DOM handling, CSS selector, JSON, Canvas, and SVG.  
 * **Install phantomjs and nodejs:**  
-```sudo zypper in phantomjs npm4```
+```sudo zypper in phantomjs npm6```
 
 ### Install CasperJS with NPM
 CasperJS: Navigation scripting & testing for PhantomJS and SlimerJS  
