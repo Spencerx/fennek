@@ -50,7 +50,7 @@ PhantomJS is a headless WebKit scriptable with a JavaScript API. It has fast and
 ### Install CasperJS with NPM
 CasperJS: Navigation scripting & testing for PhantomJS and SlimerJS  
 * **Install CasperJS Globally**  
-```sudo npm install casperjs -g```
+```sudo npm install -g casperjs```
 
 
 
