@@ -30,15 +30,17 @@ casper.libraryPath = '/docmodules';
 //casper.options.waitTimeout = 50000;
 
 // Enter your SUSE Manager Test Server URL
-var url = 'https://galaxy-production-suma3pg.tf.local';
+var url = 'https://doctest-suma3pg.tf.local';
 
 // To access system details enter your Salt Minion test client sid:
 // Example: https://example.suse.de/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var saltSid = '1000010004';
+var saltSid = '1000010000';
 
 // To access system details enter Traidtional System test client sid:
 // Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var tradSid = '1000010003';
+var tradSid = '1000010001';
+
+// TODO add sections for other generated stuff.
 
 // Login to SUSE Manager
 casper.start(url, function() {
@@ -99,9 +101,9 @@ phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/help.js');
 
-// SUSE Manager test setup modules for system details components
+// System Details for both system types (Salt and traditional)
 phantom.injectJs('docmodules/system_details_salt.js');
 phantom.injectJs('docmodules/system_details_traditional.js');
-*/
+
 
 casper.run();

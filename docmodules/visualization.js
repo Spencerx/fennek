@@ -1,8 +1,8 @@
 /**
  * Created by coyote on 3/16/17.
  */
-/*
-// Audit: Visualization: Virtualization Hierarchy
+
+// Systems: Visualization: Virtualization Hierarchy
 casper.thenOpen(url + '/rhn/manager/visualization/virtualization-hierarchy', function() {
     //wait 1 second to pickup preview button
     this.wait(5000, function ()
@@ -12,7 +12,7 @@ casper.thenOpen(url + '/rhn/manager/visualization/virtualization-hierarchy', fun
     });
 });
 
-// Audit: Visualization: Virtualization Proxy Hierarchy
+// Systems: Visualization: Virtualization Proxy Hierarchy
 casper.thenOpen(url + '/rhn/manager/visualization/proxy-hierarchy', function() {
     //wait 1 second to pickup preview button
     this.wait(5000, function ()
@@ -21,9 +21,8 @@ casper.thenOpen(url + '/rhn/manager/visualization/proxy-hierarchy', function() {
             '#spacewalk-content')
     });
 });
-*/
 
-// Audit: Visualization: System Grouping
+// Systems: Visualization: System Grouping
 casper.thenOpen(url + '/rhn/manager/visualization/systems-with-managed-groups', function() {
     this.wait(50000, function ()
     {

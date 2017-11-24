@@ -23,7 +23,7 @@ casper.thenOpen(url + '/rhn/systems/VirtualList.do', function() {
     this.captureSelector('images/systems/systems/systems_virtual_systems.png', '#spacewalk-content')
 });
 
-// Systems: Bare Metal Systems
+// Systems: Bare Metal Systems this should be adjusted to un-provisioned systems
 casper.thenOpen(url + '/rhn/systems/BootstrapSystemList.do', function() {
     this.captureSelector('images/systems/systems/systems_bare_metal.png', '#spacewalk-content')
 });
@@ -83,6 +83,10 @@ casper.thenOpen(url + '/rhn/systems/SystemEntitlements.do', function() {
     this.captureSelector('images/systems/systems/systems_system_types.png', '#spacewalk-content')
 });
 
+// Bootstrapping moved from Salt nav to 'Systems > bootstrapping' adjust reference book to reflect this
+casper.thenOpen(url + '/rhn/manager/systems/bootstrap', function() {
+    this.captureSelector('images/salt/bootstrapping.png', '#spacewalk-content')
+});
 
 
 

@@ -8,7 +8,7 @@
 
 
 # Run as normal user
-time node_modules/casperjs/bin/casperjs  --ssl-protocol=any --ignore-ssl-errors=yes --webdriver-loglevel=DEBUG  fennek.js
+time casperjs  --ssl-protocol=any --ignore-ssl-errors=yes --webdriver-loglevel=DEBUG  fennek.js
 
 
 

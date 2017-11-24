@@ -9,7 +9,6 @@ casper.thenOpen(url + '/rhn/manager/cm/images', function() {
 });
 
 // Images: Build Image
-
 casper.thenOpen(url + '/rhn/manager/cm/build', function() {
                 //this.click("input-group-addon[data-date-format='m/d/yy']");
                 this.captureSelector('images/images/images_image_build.png',

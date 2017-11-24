@@ -17,12 +17,12 @@ casper.thenOpen(url + '/rhn/manager/systems/cmd', function() {
     });
 });
 
-// Salt Bootstrapping
-casper.thenOpen(url + '/rhn/manager/systems/bootstrap', function() {
-    this.captureSelector('images/salt/bootstrapping.png', '#spacewalk-content')
-});
-
 // Salt State Catalog
 casper.thenOpen(url + '/rhn/manager/state-catalog', function() {
     this.captureSelector('images/salt/state_catalog.png', '#spacewalk-content')
+});
+
+// Salt Create State Catalog
+casper.thenOpen(url + '/rhn/manager/state-catalog/state', function() {
+    this.captureSelector('images/salt/create_state_catalog.png', '#spacewalk-content')
 });
