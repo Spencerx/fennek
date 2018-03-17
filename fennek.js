@@ -79,7 +79,7 @@ casper.thenEvaluate(function(){
 phantom.injectJs('docmodules/nav_side_bar.js');
 
 phantom.injectJs('docmodules/visualization.js');
-/*
+
 phantom.injectJs('docmodules/systems.js');
 phantom.injectJs('docmodules/navbar.js');
 phantom.injectJs('docmodules/channels.js');
@@ -106,6 +106,6 @@ phantom.injectJs('docmodules/help.js');
 // System Details for both system types (Salt and traditional)
 phantom.injectJs('docmodules/system_details_salt.js');
 phantom.injectJs('docmodules/system_details_traditional.js');
-*/
+
 
 casper.run();
