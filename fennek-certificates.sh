@@ -6,5 +6,5 @@
 #wget http://$HOSTNAME/pub/RHN-ORG-PRIVATE-SSL-KEY -O /usr/share/pki/trust/anchors/$HOSTNAME.pem
 
 wget http://fennek-runner-srv.tf.local/pub/RHN-ORG-TRUSTED-SSL-CERT -O /etc/pki/trust/anchors/fennek-runner-srv.tf.local.cert
-wget http://fennek-runner-srv.tf.local/pub/RHN-ORG-PRIVATE-SSL-KEY -O /usr/share/pki/trust/anchors/fennek-runner-srv.tf.local.pem
+#wget http://fennek-runner-srv.tf.local/pub/RHN-ORG-PRIVATE-SSL-KEY -O /usr/share/pki/trust/anchors/fennek-runner-srv.tf.local.pem
 update-ca-certificates
