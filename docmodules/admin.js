@@ -27,7 +27,7 @@ casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
 
 
 // Admin: SUSE Products
-// Care with this section, pain will follow.
+// This needs to be updated to match the new react components or fixed during migration to chrome-headless
 /*
 casper.thenOpen(url + '/rhn/manager/admin/setup/products', function() {
     this.echo(this.getTitle(), 'INFO: ');
