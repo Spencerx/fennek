@@ -28,7 +28,7 @@ casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
 
 // Admin: SUSE Products
 // Care with this section, pain will follow.
-casper.thenOpen(url + '/rhn/admin/setup/SUSEProducts.do', function() {
+casper.thenOpen(url + '/rhn/manager/admin/setup/products', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Products list to load
     this.waitForSelector('.product-add-btn', function () {
