@@ -72,7 +72,7 @@ casper.thenEvaluate(function(){
 // SUSE Manager test setup modules for normal components
 
 //phantom.injectJs('docmodules/visualization.js'); BROKEN - no react-support in phantomjs
-/*
+
 phantom.injectJs('docmodules/nav_side_bar.js');
 phantom.injectJs('docmodules/systems.js');
 phantom.injectJs('docmodules/navbar.js');
@@ -88,9 +88,7 @@ phantom.injectJs('docmodules/stored_profiles.js');
 phantom.injectJs('docmodules/custom_system_info.js');
 phantom.injectJs('docmodules/autoinstallation.js');
 phantom.injectJs('docmodules/software_crashes.js');
-*/
 phantom.injectJs('docmodules/virtual_host_manager.js');
-/*
 phantom.injectJs('docmodules/salt.js');
 phantom.injectJs('docmodules/images.js');
 phantom.injectJs('docmodules/patches.js');
@@ -103,6 +101,6 @@ phantom.injectJs('docmodules/help.js');
 // System Details for both system types (Salt and traditional)
 phantom.injectJs('docmodules/system_details_salt.js');
 phantom.injectJs('docmodules/system_details_traditional.js');
-*/
+
 
 casper.run();
