@@ -30,15 +30,15 @@ casper.libraryPath = '/docmodules';
 //casper.options.waitTimeout = 50000;
 
 // Enter your SUSE Manager Test Server URL
-var url = 'https://fennek-runner-srv.tf.local';
+var url = 'https://doc-server.tf.local';
 
 // To access system details enter your Salt Minion test client sid:
 // Example: https://example.suse.de/rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var saltSid = '1000010000';
+var saltSid = '1000010001';
 
 // To access system details enter Traidtional System test client sid:
 // Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var tradSid = '1000010001';
+var tradSid = '1000010003';
 
 // TODO add sections for other generated stuff.
 
@@ -67,18 +67,10 @@ casper.thenEvaluate(function(){
 
  The following will not load when running ./run-casper.sh
  EXAMPLE: //phantom.injectJs('docmodules/activation_keys.js');
-
- Generated image naming conventions should match that of the application folder structure they are generated in.
- For example: systems > systems > physical systems in the webui should match an image named:
-
- systems_systems_physical_systems.png
 */
 
 // SUSE Manager test setup modules for normal components
 
-
-
-// Visualization should be taken manually until we migrate to chrome headless. Phantom has issues with svg.
 phantom.injectJs('docmodules/visualization.js');
 phantom.injectJs('docmodules/nav_side_bar.js');
 phantom.injectJs('docmodules/systems.js');
@@ -103,6 +95,7 @@ phantom.injectJs('docmodules/users.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/help.js');
+
 
 // System Details for both system types (Salt and traditional)
 phantom.injectJs('docmodules/system_details_salt.js');
