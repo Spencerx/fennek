@@ -19,7 +19,7 @@ casper.thenOpen(url + '/rhn/activationkeys/channels/ChildChannels.do?tid=1', fun
     this.captureSelector('images/systems/systems_activation_key_child_channels.png', '#spacewalk-content')});
 
 // Systems: Act Key Packages
-casper.thenOpen(url + '/rhn/activationkeys/packages/Packages.do?tid=2', function() {
+casper.thenOpen(url + '/rhn/activationkeys/packages/Packages.do?tid=1', function() {
     this.captureSelector('images/systems/systems_activation_key_packages.png', '#spacewalk-content')});
 
 // Systems: Act Key Configuration : List unsubscribe
