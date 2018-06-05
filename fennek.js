@@ -69,9 +69,9 @@ casper.thenEvaluate(function(){
  EXAMPLE: //phantom.injectJs('docmodules/activation_keys.js');
 */
 
-// SUSE Manager test setup modules for normal components
+// SUSE Manager modules for webui components
 
-//phantom.injectJs('docmodules/visualization.js'); BROKEN - no react-support in phantomjs
+//phantom.injectJs('docmodules/visualization.js'); BROKEN - no svg/react-support in phantomjs
 
 phantom.injectJs('docmodules/nav_side_bar.js');
 phantom.injectJs('docmodules/systems.js');
@@ -96,7 +96,6 @@ phantom.injectJs('docmodules/users.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/help.js');
-
 
 // System Details for both system types (Salt and traditional)
 phantom.injectJs('docmodules/system_details_salt.js');
