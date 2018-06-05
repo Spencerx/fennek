@@ -10,12 +10,12 @@ casper.thenOpen(url + '/rhn/manager/vhms', function() {
 });
 
 // Systems: Virtual Host Managers
-casper.thenOpen(url + '/rhn/manager/vhms/add?module=File', function() {
+casper.thenOpen(url + '/rhn/manager/vhms#/create/file', function() {
     this.captureSelector('images/systems/systems_virtual_host_managers_file.png', '#spacewalk-content')
 });
 
 // Systems: Virtual Host Managers
-casper.thenOpen(url + '/rhn/manager/vhms/add?module=VMware', function() {
+casper.thenOpen(url + '/rhn/manager/vhms#/create/vmware', function() {
     //use sendKeys by default for filling forms. If there is javascript the dict function will not work.
     this.sendKeys("input[name='label']", 'Galaxy');
     this.sendKeys("input[name='module_hostname']", 'galaxy.suse.com');
