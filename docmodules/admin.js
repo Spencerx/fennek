@@ -17,7 +17,7 @@ casper.thenOpen(url + '/rhn/admin/setup/ProxySettings.do', function() {
 
 // Admin: Organization Credentials
 casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
-    this.echo(this.getTitle(), 'INFO: ');
+    this.echo(this.getTitle(), '.product-list ');
     //wait 1 second to pickup organization
     this.waitForSelector('.text-success', function () {
         this.captureSelector('images/admin/admin_organization_credentials.png',
@@ -28,10 +28,11 @@ casper.thenOpen(url + '/rhn/admin/setup/MirrorCredentials.do', function() {
 
 // Admin: SUSE Products
 // Care with this section, pain will follow.
+/*
 casper.thenOpen(url + '/rhn/manager/admin/setup/products', function() {
     this.echo(this.getTitle(), 'INFO: ');
     //wait 50 seconds to for SUSE Products list to load
-    this.waitForSelector('.product-add-btn', function () {
+    this.waitForText('include recommended', function () {
 
         //load page in sandbox context
         var str = this.evaluate(function () {
@@ -55,10 +56,10 @@ casper.thenOpen(url + '/rhn/manager/admin/setup/products', function() {
         console.log(str);
         this.captureSelector('images/admin/admin_suse_products.png',
             '#spacewalk-content');
-    },undefined,100000);
+    },undefined,200000);
 
 });
-
+*/
 
 // Admin > Organizations
 casper.thenOpen(url + '/rhn/admin/multiorg/Organizations.do', function() {
