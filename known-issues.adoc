@@ -1,0 +1,11 @@
+= Known Issues
+
+== Problem images
+
+The following images have been commented out:
+
+[path]``Systems > System Details > Traditional``
+system_details_traditional_configuration_deploy_file.png
+system_details_traditional_configuration_diff_file.png
+system_details_traditional_configuration_add_files_import.png
+
