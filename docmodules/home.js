@@ -73,12 +73,6 @@ casper.thenOpen(url + '/rhn/account/ChangeEmail.do', function () {
 });
 
 
-// Home: User Account: Credentials
-casper.thenOpen(url + '/rhn/account/Credentials.do', function () {
-    this.captureSelector('images/home/user-account/home_user_account_credentials.png', '#spacewalk-content')
-});
-
-
 // Home: User Account: Account Deactivation
 casper.thenOpen(url + '/rhn/account/AccountDeactivation.do', function () {
     this.captureSelector('images/home/user-account/home_user_account_account_deactivation.png', '#spacewalk-content')
