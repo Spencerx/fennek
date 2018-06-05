@@ -38,7 +38,7 @@ var saltSid = '1000010001';
 
 // To access system details enter Traidtional System test client sid:
 // Example: /rhn/systems/details/packages/UpgradableList.do?sid=1000010000&
-var tradSid = '1000010003';
+var tradSid = '1000010003&';
 
 // TODO add sections for other generated stuff.
 

@@ -17,13 +17,13 @@ casper.thenOpen(url + '/rhn/manager/vhms#/create/file', function() {
 // Systems: VHMS VMWare
 casper.thenOpen(url + '/rhn/manager/vhms#/create/vmware', function() {
     //use sendKeys by default for filling forms. If there is javascript the dict function will not work.
-   /*
-    this.sendKeys("input[name='label']", 'Galaxy');
-    this.sendKeys("input[name='module_hostname']", 'galaxy.suse.com');
-    this.sendKeys("input[name='module_port']", '443');
-    this.sendKeys("input[name='module_username']", 'Geeko');
-    this.sendKeys("input[name='module_password']", 'Penguin');
-    */
+    /*
+     this.sendKeys("input[name='label']", 'Galaxy');
+     this.sendKeys("input[name='module_hostname']", 'galaxy.suse.com');
+     this.sendKeys("input[name='module_port']", '443');
+     this.sendKeys("input[name='module_username']", 'Geeko');
+     this.sendKeys("input[name='module_password']", 'Penguin');
+     */
     this.captureSelector('images/systems/systems_virtual_host_managers_vmware.png', '#spacewalk-content');
 
 });

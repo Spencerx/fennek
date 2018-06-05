@@ -210,12 +210,13 @@ casper.thenOpen(url + '/rhn/systems/details/configuration/addfiles/UploadFile.do
 
 
 // Systems > System Details > Configuration > Addfiles Import
+/*
 casper.thenOpen(url + '/rhn/systems/details/configuration/addfiles/ImportFile.do?sid=' + tradSid, function() {
     this.echo(this.getTitle(), 'INFO: ');
     this.captureSelector('images/systems/systems-details/traditional/system_details_traditional_configuration_add_files_import.png',
         '#spacewalk-content')
 });
-
+*/
 
 // Systems > System Details > Configuration > Addfiles Create File
 casper.thenOpen(url + '/rhn/systems/details/configuration/addfiles/CreateFile.do?sid=' + tradSid, function() {
@@ -226,20 +227,22 @@ casper.thenOpen(url + '/rhn/systems/details/configuration/addfiles/CreateFile.do
 
 
 // Systems > System Details > Configuration > Deploy File
+/*
 casper.thenOpen(url + '/rhn/systems/details/configuration/DeployFile.do?sid=' + tradSid, function() {
     this.echo(this.getTitle(), 'INFO: ');
     this.captureSelector('images/systems/systems-details/traditional/system_details_traditional_configuration_deploy_file.png',
         '#spacewalk-content')
 });
-
+*/
 
 // Systems > System Details > Configuration > Diff File
+/*
 casper.thenOpen(url + '/rhn/systems/details/configuration/DiffFile.do?sid=' + tradSid, function() {
     this.echo(this.getTitle(), 'INFO: ');
     this.captureSelector('images/systems/systems-details/traditional/system_details_traditional_configuration_diff_file.png',
         '#spacewalk-content')
 });
-
+*/
 
 // Systems > System Details > Configuration > Config Channel List
 casper.thenOpen(url + '/rhn/systems/details/configuration/ConfigChannelList.do?sid=' + tradSid, function() {
