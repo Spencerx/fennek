@@ -84,7 +84,7 @@ casper.thenOpen(url + '/rhn/systems/SystemEntitlements.do', function() {
 
 // Bootstrapping moved from Salt nav to 'Systems > bootstrapping' adjust reference book to reflect this
 casper.thenOpen(url + '/rhn/manager/systems/bootstrap', function() {
-    this.captureSelector('images/salt/bootstrapping.png', '#spacewalk-content')
+    this.captureSelector('images/systems/bootstrapping.png', '#spacewalk-content')
 });
 
 

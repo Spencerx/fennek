@@ -2,7 +2,7 @@
  * Created by jcayouette on 3/16/17.
  */
 
-// Salt Onboarding
+// Salt Keys
 casper.thenOpen(url + '/rhn/manager/systems/keys', function() {
     this.captureSelector('images/salt/onboarding.png', '#spacewalk-content')
 });
@@ -17,12 +17,7 @@ casper.thenOpen(url + '/rhn/manager/systems/cmd', function() {
     });
 });
 
-// Salt State Catalog
-casper.thenOpen(url + '/rhn/manager/state-catalog', function() {
-    this.captureSelector('images/salt/state_catalog.png', '#spacewalk-content')
-});
-
-// Salt Create State Catalog
-casper.thenOpen(url + '/rhn/manager/state-catalog/state', function() {
-    this.captureSelector('images/salt/create_state_catalog.png', '#spacewalk-content')
+// Salt Formula Catalog
+casper.thenOpen(url + '/rhn/manager/formula-catalog', function() {
+    this.captureSelector('images/salt/formula-catalog.png', '#spacewalk-content')
 });
