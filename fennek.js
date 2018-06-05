@@ -96,7 +96,6 @@ phantom.injectJs('docmodules/users.js');
 phantom.injectJs('docmodules/configuration.js');
 phantom.injectJs('docmodules/schedule.js');
 phantom.injectJs('docmodules/help.js');
-*/
 
 // System Details for both system types (Salt and traditional)
 phantom.injectJs('docmodules/system_details_salt.js');
