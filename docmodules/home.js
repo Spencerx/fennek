@@ -85,12 +85,6 @@ casper.thenOpen(url + '/rhn/account/UserPreferences.do', function () {
 });
 
 
-// Home: Locale Preferences ###
-casper.thenOpen(url + '/rhn/account/LocalePreferences.do', function () {
-    this.captureSelector('images/home/home_locale_preferences.png', '#spacewalk-content')
-});
-
-
 // Home: Organization: Configuration
 casper.thenOpen(url + '/rhn/multiorg/OrgConfigDetails.do', function () {
     this.captureSelector('images/home/your-organization/home_your_organization_configuration.png','#spacewalk-content')
